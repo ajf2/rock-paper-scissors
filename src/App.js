@@ -1,23 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Rock Paper Scissors</h1>
+        <h5>Built with <code>create-react-app</code> by Adrian Flood</h5>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          This game supports two players and either player can be computer-controlled. Player one uses the keys A S D to select rock, paper, scissors respectively. Player two uses the left, down and right arrow keys.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
