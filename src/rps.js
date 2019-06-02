@@ -1,6 +1,6 @@
-export const ROCK = 'rock';
-export const PAPER = 'paper';
-export const SCISSORS = 'scissors';
+export const ROCK = '✊';
+export const PAPER = '🖐️';
+export const SCISSORS = '✌️';
 
 export const P1WIN = 'p1win';
 export const P2WIN = 'p2win';
