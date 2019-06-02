@@ -10,8 +10,12 @@ export const DRAW = 'draw';
  * Returns the result of a round of rock, paper, scissors.
  * @param {string} p1
  * @param {string} p2
+ * @returns A state of P1Wins, P2Wins, Draw or null if either input is null.
  */
-export function resolveRound(p1, p2) {
+export function determineResult(p1, p2) {
+  if (p1 === null || p2 === null) {
+    return null;
+  }
   switch (p1) {
     case ROCK:
       return resolveRockVs(p2);

@@ -1,43 +1,49 @@
-import { resolveRound, ROCK, PAPER, SCISSORS, P1WIN, P2WIN, DRAW } from './rps';
+import { determineResult, ROCK, PAPER, SCISSORS, P1WIN, P2WIN, DRAW } from './rps';
 
 test('rock beats scissors', () => {
-  expect(resolveRound(ROCK, SCISSORS)).toBe(P1WIN);
+  expect(determineResult(ROCK, SCISSORS)).toBe(P1WIN);
 });
 
 test('rock loses to paper', () => {
-  expect(resolveRound(ROCK, PAPER)).toBe(P2WIN);
+  expect(determineResult(ROCK, PAPER)).toBe(P2WIN);
 });
 
 test('paper beats rock', () => {
-  expect(resolveRound(PAPER, ROCK)).toBe(P1WIN);
+  expect(determineResult(PAPER, ROCK)).toBe(P1WIN);
 });
 
 test('paper loses to scissors', () => {
-  expect(resolveRound(PAPER, SCISSORS)).toBe(P2WIN);
+  expect(determineResult(PAPER, SCISSORS)).toBe(P2WIN);
 });
 
 test('scissors beat paper', () => {
-  expect(resolveRound(SCISSORS, PAPER)).toBe(P1WIN);
+  expect(determineResult(SCISSORS, PAPER)).toBe(P1WIN);
 });
 
 test('scissors lose to rock', () => {
-  expect(resolveRound(SCISSORS, ROCK)).toBe(P2WIN);
+  expect(determineResult(SCISSORS, ROCK)).toBe(P2WIN);
 });
 
 test('rock draws with rock', () => {
-  expect(resolveRound(ROCK, ROCK)).toBe(DRAW);
+  expect(determineResult(ROCK, ROCK)).toBe(DRAW);
 });
 
 test('paper draws with paper', () => {
-  expect(resolveRound(PAPER, PAPER)).toBe(DRAW);
+  expect(determineResult(PAPER, PAPER)).toBe(DRAW);
 });
 
 test('scissors draw with scissors', () => {
-  expect(resolveRound(SCISSORS, SCISSORS)).toBe(DRAW);
+  expect(determineResult(SCISSORS, SCISSORS)).toBe(DRAW);
 });
 
 test('nonsense throws an error', () => {
   expect(() => {
-    resolveRound(null, 'badgers');
+    determineResult('badgers', 'mushroom');
   }).toThrowError();
+});
+
+test('null input produces null output', () => {
+  expect(determineResult(null, SCISSORS)).toBe(null);
+  expect(determineResult(PAPER, null)).toBe(null);
+  expect(determineResult(null, null)).toBe(null);
 });
