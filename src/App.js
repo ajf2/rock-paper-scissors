@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Game from './Game';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           This game supports two players and either player can be computer-controlled. Player one uses the keys A S D to select rock, paper, scissors respectively. Player two uses the left, down and right arrow keys.
         </p>
       </header>
+      <Game />
     </div>
   );
 }
