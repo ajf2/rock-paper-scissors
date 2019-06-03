@@ -1,6 +1,6 @@
 import React from 'react';
 import Player from './Player';
-import { determineResult, ROCK, PAPER, SCISSORS, DRAW, P1WIN, P2WIN } from './rps';
+import { determineResult, ROCK, PAPER, SCISSORS } from './rps';
 
 export default class Game extends React.Component {
   constructor(props) {
@@ -61,7 +61,7 @@ export default class Game extends React.Component {
   render() {
     return (
       <div>
-        <p>{this.state.result === DRAW ? 'The game is tied' : this.state.result === P1WIN ? 'Player 1 Wins' : this.state.result === P2WIN ? 'Player 2 Wins' : 'No game in progress'}</p>
+        <p>{this.state.result}</p>
         <Player name="Player 1" selection={this.state.selections[0]} />
         <Player name="Player 2" selection={this.state.selections[1]} />
       </div>
