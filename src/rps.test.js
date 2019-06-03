@@ -1,4 +1,4 @@
-import { determineResult, ROCK, PAPER, SCISSORS, P1WIN, P2WIN, DRAW } from './rps';
+import { determineResult, ROCK, PAPER, SCISSORS, P1WIN, P2WIN, DRAW, pickAtRandom } from './rps';
 
 test('rock beats scissors', () => {
   expect(determineResult(ROCK, SCISSORS)).toBe(P1WIN);
@@ -46,4 +46,8 @@ test('null input produces null output', () => {
   expect(determineResult(null, SCISSORS)).toBe(null);
   expect(determineResult(PAPER, null)).toBe(null);
   expect(determineResult(null, null)).toBe(null);
+});
+
+test('pickAtRandom returs rock, paper or scissors', () => {
+  expect([ROCK, PAPER, SCISSORS]).toContain(pickAtRandom());
 });

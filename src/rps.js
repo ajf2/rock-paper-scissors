@@ -31,6 +31,15 @@ export function determineResult(p1, p2) {
 }
 
 /**
+ * Returns a random rock, paper or scissors.
+ */
+export function pickAtRandom() {
+  const random = Math.floor(Math.random() * Math.floor(3));
+  const values = [ROCK, PAPER, SCISSORS];
+  return values[random];
+}
+
+/**
  * Returns the result of rock vs something else.
  * @param {string} p2
  */
