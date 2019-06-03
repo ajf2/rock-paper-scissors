@@ -48,6 +48,6 @@ test('null input produces null output', () => {
   expect(determineResult(null, null)).toBe(null);
 });
 
-test('pickAtRandom returs rock, paper or scissors', () => {
+test('pickAtRandom returns rock, paper or scissors', () => {
   expect([ROCK, PAPER, SCISSORS]).toContain(pickAtRandom());
 });
