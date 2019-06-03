@@ -9,12 +9,11 @@ This is a modern JavaScript web app which runs on modern browsers only. It requi
 Installation on Windows is straight forward but I had trouble getting it to run on an Ubuntu 18.04 (Bionic Beaver) VM. It seems that the usual `sudo apt install nodejs` command will install NodeJS 8.x and there's a different way to install Node on Ubuntu (see https://github.com/nodesource/distributions/blob/master/README.md#debinstall for info):
 ```
 sudo apt install -y curl git
-cd ~
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt install -y nodejs
 ```
 
-For any OS, install the app with the following:
+For any OS, `cd` into the directory you want to install the app and run the following:
 ```
 git clone https://github.com/ajf2/rock-paper-scissors
 cd rock-paper-scissors
