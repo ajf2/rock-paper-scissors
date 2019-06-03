@@ -104,11 +104,11 @@ export default class Game extends React.Component {
   render() {
     return (
       <div>
-        <p>{this.state.result}</p>
         <div className="players">
           <Player name="Player 1" selection={this.state.selections[0]} result={this.state.result} />
           <Player name="Player 2" selection={this.state.selections[1]} result={this.state.result} />
         </div>
+        <p className="result">{this.state.result}</p>
       </div>
     );
   }
