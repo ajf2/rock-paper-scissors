@@ -13,8 +13,8 @@ export default class Game extends React.Component {
 
   handleKeyPress(event) {
     const key = event.key;
-    const isP1Event = key === 'a' || key === 's' || key === 'd';
-    const isP2Event = key === 'j' || key === 'k' || key === 'l';
+    const isP1Event = ['a', 's', 'd'].includes(key);
+    const isP2Event = ['j', 'k', 'l'].includes(key);
     let newSelections = this.state.selections.slice();
     if (isP1Event) {
       switch (key) {
