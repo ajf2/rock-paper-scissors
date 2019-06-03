@@ -1,5 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rock Paper Scissors
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). I've left most of its original readme below for future reference.
 
+## Installation
+This is a modern JavaScript web app which runs on modern browsers only. It requires the following:
+- NodeJS v10 or greater
+- npm v5 or greater
+
+Installation on Windows is straight forward but I had trouble getting it to run on an Ubuntu 18.04 (Bionic Beaver) VM. It seems that the usual `sudo apt install nodejs` command will install NodeJS 8.x and there's a different way to install Node on Ubuntu (see https://github.com/nodesource/distributions/blob/master/README.md#debinstall for info):
+```
+sudo apt install -y curl git
+cd ~
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt install -y nodejs
+```
+
+For any OS, install the app with the following:
+```
+git clone https://github.com/ajf2/rock-paper-scissors
+cd rock-paper-scissors
+npm install
+```
+
+## Running the App
+With Node installed, run the app with a single command:
+```
+npm start
+```
+
+## Playing the Game
+Rock Paper Scissors is a two player game. Player one has to choose rock, paper or scissors by pressing the `A`, `S` or `D` key, respectively. Similarly, player two's controls are the `J`, `K` and `L` keys. To prevent cheating, make sure to obscure your hand from the other player's view. Or perhaps fashion a physical divider out of paper or card and place it in the middle of the keyboard.
+
+The game has an "automatic CPU control" feature. If either player one or two presses a key and the other player doesn't press anything within three seconds, the computer will automatically pick a response at random.
+
+## Design Notes
+The core code for the game logic is in the `rps.js` file. This is accompanied by an `rps.test.js` file containing Jest unit tests. The functions in rps.js can be changed to alter the game's rules with minimal changes required to the React component files.
+
+The React components are the `App.js`, `Game.js` and `Player.js` files. These each contain a single component and its logic.
+
+# `create-react-app` Readme:
 ## Available Scripts
 
 In the project directory, you can run:
