@@ -2,9 +2,11 @@ export const ROCK = '✊';
 export const PAPER = '🖐️';
 export const SCISSORS = '✌️';
 
-export const P1WIN = 'p1win';
-export const P2WIN = 'p2win';
-export const DRAW = 'draw';
+export const P1WIN = 'Player 1 Wins';
+export const P2WIN = 'Player 2 Wins';
+export const DRAW = 'The game is tied';
+export const IN_PROGRESS = 'Make your selection...';
+export const NO_GAME = 'No game in progress';
 
 /**
  * Returns the result of a round of rock, paper, scissors.
