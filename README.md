@@ -26,6 +26,11 @@ With Node installed, run the app with a single command:
 npm start
 ```
 
+If you have Docker, you could also run a pre-built Docker container that's on my DockerHub account with the following command:
+```
+docker container run -p 80:80 iamadro/rock-paper-scissors
+```
+
 ## Playing the Game
 Rock Paper Scissors is a two player game. Player one has to choose rock, paper or scissors by pressing the `A`, `S` or `D` key, respectively. Similarly, player two's controls are the `J`, `K` and `L` keys. To prevent cheating, make sure to obscure your hand from the other player's view. Or perhaps fashion a physical divider out of paper or card and place it in the middle of the keyboard.
 
