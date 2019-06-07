@@ -6,10 +6,8 @@ FROM node:10 AS builder
 WORKDIR /app
 # Copy the app's source from the current directory into /app
 COPY . /app
-# Download dependencies from npm.
-RUN npm install
-# Run build command. Output would go into /app/build.
-RUN npm run build
+# Download dependencies from npm and run the build command. Output will go into /app/build.
+RUN npm install && npm run build
 
 # Host using nginx.
 FROM nginx:latest AS prod
